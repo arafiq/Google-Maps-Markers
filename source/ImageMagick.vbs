@@ -44,14 +44,14 @@ For Each objFile In objFiles
 
 		For i = 0 To UBound(arrAlpha)
 			strChar = arrAlpha(i)
-
-			Select Case strChar
-				Case "@"
-					strExe = Replace(strBase, strPos, "text 2,-9")
-				Case Else
-					strExe = strBase
-			End Select
-
+			strExe = strBase	
+			'Select Case strChar
+			'	Case "@"
+			'		strExe = Replace(strBase, strPos, "text 2,-9")
+			'	Case Else
+			'		strExe = strBase
+			'End Select
+			
 			Run InsertParams(strExe, strFileFull, TextColor(strFileColor), strChar, strSave & strFile & strFileColor & strChar & ".png")
 		Next
 
